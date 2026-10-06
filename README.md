@@ -41,15 +41,15 @@ La carpeta `explicar-codigo/` es la skill instalable.
 ### Opción 1 — Global (todos tus proyectos)
 
 ```bash
-git clone https://github.com/brian3-21/por-que-existe.git
-cp -r por-que-existe/explicar-codigo ~/.config/opencode/skills/
+git clone https://github.com/brian3-21/explicar-codigo.git
+cp -r explicar-codigo/explicar-codigo ~/.config/opencode/skills/
 ```
 
 En Windows PowerShell:
 
 ```powershell
-git clone https://github.com/brian3-21/por-que-existe.git
-Copy-Item -Recurse "por-que-existe\explicar-codigo" "$HOME\.config\opencode\skills\"
+git clone https://github.com/brian3-21/explicar-codigo.git
+Copy-Item -Recurse "explicar-codigo\explicar-codigo" "$HOME\.config\opencode\skills\"
 ```
 
 ### Opción 2 — Solo este proyecto
