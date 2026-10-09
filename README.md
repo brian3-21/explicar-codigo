@@ -36,25 +36,25 @@ El formato **se adapta a la pregunta** en lugar de imponer siempre los mismos bl
 
 ## Instalación
 
-La carpeta `explicar-codigo/` es la skill instalable.
+La carpeta `skills/explicar-codigo/` es la skill instalable.
 
 ### Opción 1 — Global (todos tus proyectos)
 
 ```bash
 git clone https://github.com/brian3-21/explicar-codigo.git
-cp -r explicar-codigo/explicar-codigo ~/.config/opencode/skills/
+cp -r explicar-codigo/skills/explicar-codigo ~/.config/opencode/skills/
 ```
 
 En Windows PowerShell:
 
 ```powershell
 git clone https://github.com/brian3-21/explicar-codigo.git
-Copy-Item -Recurse "explicar-codigo\explicar-codigo" "$HOME\.config\opencode\skills\"
+Copy-Item -Recurse "explicar-codigo\skills\explicar-codigo" "$HOME\.config\opencode\skills\"
 ```
 
 ### Opción 2 — Solo este proyecto
 
-Copia la carpeta `explicar-codigo/` a `.opencode/skills/` dentro del proyecto donde quieras usarla.
+Copia la carpeta `skills/explicar-codigo/` a `.opencode/skills/` dentro del proyecto donde quieras usarla.
 
 ### Opción 3 — Usar el repo como fuente
 
@@ -63,7 +63,7 @@ En `opencode.json` o `opencode.jsonc`:
 ```jsonc
 {
   "$schema": "https://opencode.ai/config.json",
-  "skills": ["./explicar-codigo"]
+  "skills": ["./skills/explicar-codigo"]
 }
 ```
 
@@ -89,21 +89,22 @@ Preguntas que la activan:
 .
 ├── README.md
 ├── LICENSE
-└── explicar-codigo/             ← la skill instalable
-    ├── SKILL.md                 ← flujo, clasificación de preguntas, reglas de estilo
-    └── references/
-        ├── analisis-proyecto.md ← paso 0: qué leer y con qué orden
-        └── formatos.md          ← los 5 formatos con un ejemplo relleno cada uno
+└── skills/
+    └── explicar-codigo/         ← la skill instalable
+        ├── SKILL.md             ← flujo, clasificación de preguntas, reglas de estilo
+        └── references/
+            ├── analisis-proyecto.md ← paso 0: qué leer y con qué orden
+            └── formatos.md          ← los 5 formatos con un ejemplo relleno cada uno
 ```
 
-El ID de la skill lo define la ruta (`explicar-codigo/SKILL.md` → `explicar-codigo`), no el campo `name` del frontmatter, que es solo la etiqueta visible («Explicar Código»).
+El ID de la skill lo define la ruta (`skills/explicar-codigo/SKILL.md` → `explicar-codigo`), no el campo `name` del frontmatter, que es solo la etiqueta visible («Explicar Código»).
 
 ## Personalización
 
-- **Cuándo se ofrece la skill** — el campo `description` del frontmatter en `explicar-codigo/SKILL.md`.
-- **Qué preguntas existen** — la tabla de la sección «Clasifica la pregunta» en `SKILL.md`. Añade o quita filas para cambiar los tipos.
-- **Qué se lee del proyecto** — `references/analisis-proyecto.md`.
-- **Cómo se responde** — `references/formatos.md`. Añade un bloque a un formato o cambia los ejemplos.
+- **Cuándo se ofrece la skill** — el campo `description` del frontmatter en `skills/explicar-codigo/SKILL.md`.
+- **Qué preguntas existen** — la tabla de la sección «Clasifica la pregunta» en `skills/explicar-codigo/SKILL.md`. Añade o quita filas para cambiar los tipos.
+- **Qué se lee del proyecto** — `skills/explicar-codigo/references/analisis-proyecto.md`.
+- **Cómo se responde** — `skills/explicar-codigo/references/formatos.md`. Añade un bloque a un formato o cambia los ejemplos.
 
 ## Licencia
 
